@@ -7,13 +7,13 @@
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    background-color: black; /* Set background to black */
-    color: white; /* Set text color to white for contrast */
+    background-color: black;
+    color: white;
 }
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: black; /* Set navbar background to black */
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,73 +52,26 @@ body {
     border-radius: 4px;
 }
 
-/* Dropdown Styles */
-.dropdown-content {
-    display: none; /* Ensure dropdown is hidden by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content li {
-    padding: 10px;
-}
-
-.dropdown-content li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-/* Show dropdown when .show class is added */
-.dropdown-content.show {
-    display: block; /* Show dropdown when .show class is applied */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Mobile Styles */
-.toggle-button {
-    display: flex; /* Ensure toggle button is visible */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
 @media (max-width: 768px) {
     .navbar-links {
-        display: none;
+        display: none; /* Hidden by default */
         flex-direction: column;
         width: 100%;
         background-color: #333;
         position: fixed;
-        top: 0;
+        top: 60px; /* Adjust based on navbar height */
         left: 0;
-        height: 100vh;
-        justify-content: center;
+        height: calc(100vh - 60px); /* Full height minus navbar height */
+        justify-content: flex-start;
         align-items: center;
+        padding-top: 20px;
     }
 
     .navbar-links.active {
-        display: flex;
+        display: flex; /* Show when active class is added */
     }
-    
+
     .navbar-links ul {
         flex-direction: column;
         width: 100%;
@@ -130,74 +83,24 @@ body {
     }
 
     .toggle-button {
-        display: flex;
+        display: flex; /* Ensure toggle button is visible */
     }
 }
 
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer .row {
-    display: flex;
+/* Toggle Button Styles */
+.toggle-button {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 30px;
+    height: 21px;
+    cursor: pointer ;
 }
 
-.footer .col-md-4 {
-    flex-basis: 33.33%;
-    padding: 10px;
-}
-
-.footer h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer li {
-    margin-bottom: 5px;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #ccc;
-}
-
-.footer .copyright {
-    background-color: #444;
-    padding: 5px 0;
-    margin-top: 10px;
-}
-
-.footer .copyright p {
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-/* Make the footer stick to the bottom */
-.footer {
-    position: absolute;
-    bottom: 0;
+.toggle-button .bar {
+    height: 3px;
     width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
