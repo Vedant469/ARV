@@ -84,8 +84,14 @@ body {
 
     .navbar-links ul li {
         padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a line after each button */
+        width: 100%; /* Ensure the line spans the full width */
+        text-align: center; /* Center the text */
     }
 
+    .navbar-links ul li:last-child {
+        border-bottom: none; /* Remove the line after the last button */
+    }
     .toggle-button {
         display: flex; /* Ensure toggle button is visible */
     }
