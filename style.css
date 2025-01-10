@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white for contrast */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: black; /* Set navbar background to black */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.brand-title {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-links ul li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none; /* Ensure dropdown is hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show dropdown when .show class is added */
+.dropdown-content.show {
+    display: block; /* Show dropdown when .show class is applied */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Styles */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links ul li {
+        padding: 15px 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .col-md-4 {
+    flex-basis: 33.33%;
+    padding: 10px;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+.footer .copyright {
+    background-color: #444;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.footer .copyright p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Make the footer stick to the bottom */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

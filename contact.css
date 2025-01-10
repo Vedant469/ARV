@@ -1,0 +1,62 @@
+/* Contact Information Section Styles */
+.contact-info {
+    padding: 50px 20px;
+    background-color: #222; /* Change to a darker shade */
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white; /* Change text color to white for contrast */
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    background-color: #333; /* Darker background for contact items */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: white; /* Change icon color to white */
+    margin-bottom: 10px;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    color: white; /* Change heading color to white */
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    color: #ccc; /* Change text color for better contrast */
+    margin: 10px 0;
+}
+
+.contact-item a {
+    color: white; /* Change link color to white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #575757;
+}
