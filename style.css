@@ -86,7 +86,7 @@ body {
 
 /* Mobile Styles */
 .toggle-button {
-    display: none;
+    display: flex; /* Ensure toggle button is visible */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
