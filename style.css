@@ -1,3 +1,4 @@
+/* Existing CSS (keep this as is) */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,6 @@ body {
     color: white;
 }
 
-/* Navigation Bar Styles */
 .navbar {
     background-color: black;
     display: flex;
@@ -66,10 +66,13 @@ body {
         justify-content: flex-start;
         align-items: center;
         padding-top: 20px;
+        transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+        transform: translateX(-100%); /* Start off-screen */
     }
 
     .navbar-links.active {
         display: flex; /* Show when active class is added */
+        transform: translateX(0); /* Slide into view */
     }
 
     .navbar-links ul {
@@ -94,7 +97,9 @@ body {
     justify-content: space-between;
     width: 30px;
     height: 21px;
-    cursor: pointer ;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
 }
 
 .toggle-button .bar {
@@ -103,4 +108,24 @@ body {
     background-color: white;
     border-radius: 5px;
     transition: all 0.3s ease;
+}
+
+/* Transform hamburger into cross */
+.toggle-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Show toggle button on mobile */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
 }
