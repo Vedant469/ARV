@@ -36,20 +36,32 @@ body {
 
 .navbar-links ul li {
     position: relative;
-    padding: 0 15px;
+    padding: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.navbar-links ul li:last-child {
+    border-radius: none;
+}
 .navbar-links ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 12px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-links ul li a:hover {
-    background-color: #575757;
+    background-color: transparent;
+    transform: translate(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    
+}
+
+.navbar-links ul li a:active {
+    transform:  translateY(4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Mobile Styles */
