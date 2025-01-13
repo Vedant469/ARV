@@ -18,7 +18,7 @@ db.connect((err) => {
     console.log('Connected to database');
 });
 
-const excelFilePath = './data/data.xlsx';
+const excelFilePath = '"C:\Users\vedan\OneDrive\Desktop\ARV\data\data.xlsx"';
 
 app.post('/contact/data/excel', (req, res) => {
     const data = req.body;
