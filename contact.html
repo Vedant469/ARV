@@ -14,7 +14,32 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-    <script src="https://sheetdb.io/s/f/1bk3c2cury094.js">
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            fetch('https://sheetdb.io/api/v1/bnwnina3v5kn8', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Form submitted successfully!');
+                document.getElementById('contact-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form.');
+            });
+        });
     </script>
 </section>
 <button onclick="window.location.href='index.html'">Home</button>
