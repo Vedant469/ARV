@@ -4,27 +4,9 @@
     text-align: center;
 }
 
-<<<<<<< HEAD
 .contact-form {
     width: 50%;
     margin: 0 auto;
-=======
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: white; /* Change text color to white for contrast */
-}
-
-.contact-details {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.contact-item {
-    background-color: #000000; /* Darker background for contact items */
->>>>>>> 98554b36a08dc27756d86fc7b86dc2f1cb8e90e8
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
