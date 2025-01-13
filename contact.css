@@ -1,62 +1,40 @@
-/* Contact Information Section Styles */
 .contact-info {
     padding: 50px 20px;
-    background-color: #222; /* Change to a darker shade */
+    background-color: #f7f7f7;
     text-align: center;
 }
 
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: white; /* Change text color to white for contrast */
-}
-
-.contact-details {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.contact-item {
-    background-color: #333; /* Darker background for contact items */
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.contact-item i {
-    font-size: 2rem;
-    color: white; /* Change icon color to white */
+.contact-form label {
+    display: block;
     margin-bottom: 10px;
 }
 
-.contact-item h3 {
-    font-size: 1.5rem;
-    color: white; /* Change heading color to white */
-    margin-bottom: 15px;
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
 }
 
-.contact-item p {
-    font-size: 1.1rem;
-    color: #ccc; /* Change text color for better contrast */
-    margin: 10px 0;
+.contact-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.contact-item a {
-    color: white; /* Change link color to white */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: #575757;
+.contact-form button[type="submit"]:hover {
+    background-color: #3e8e41;
 }

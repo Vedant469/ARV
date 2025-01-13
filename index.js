@@ -1,12 +1,23 @@
-const toggleButton = document.getElementById('toggle-button');
-const navbarLinks = document.getElementById('navbar-links');
+const express = require('express');
+const app = express();
+const mysql = require('mysql');
+const exceljs = require('exceljs');
 
-toggleButton.addEventListener('click', () => {
-     // Toggle the menu
-     navbarLinks.classList.toggle('active');
-   // Toggle the cross icon
-   toggleButton.classList.toggle('active');
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'database'
 });
+
+db.connect((err) => {
+    if (err) {
+        console.error('Error connecting to database:', err);
+        return;
+    }
+    console.log('Connected to database');
+});
+
 const excelFilePath = './data/data.xlsx';
 
 app.post('/contact/data/excel', (req, res) => {
@@ -21,4 +32,8 @@ app.post('/contact/data/excel', (req, res) => {
             res.send({ message: 'Data inserted successfully' });
         }
     });
+});
+
+app.listen(3000, () => {
+    console.log('Server listening on port 3000');
 });
