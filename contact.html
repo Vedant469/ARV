@@ -11,27 +11,83 @@
 <body>
   <div class="container">
     <div class="contact-box">
-      <div class="contact-left">
-        <h2>Get in Touch</h2>
-        <p>Send us a message and we'll get back to you as soon as possible.</p>
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+      <h2 class="title">Get in Touch</h2>
+      <p class="description">Send us a message and we'll get back to you as soon as possible.</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="social-media-links">
+        <a href="#" class="social-media-link">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="social-media-link">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="social-media-link">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="testimonials">
+        <h3 class="testimonial-title">What Our Customers Say</h3>
+        <div class="testimonial">
+          <p class="testimonial-text">"I had a great experience with this company. They were very responsive and helpful."</p>
+          <p class="testimonial-author">- John Doe</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"I was impressed with the quality of their products and services."</p>
+          <p class="testimonial-author">- Jane Doe</p>
+        </div>
+      </div>
+      <div class="live-chat">
+        <button class="live-chat-button">Live Chat</button>
+        <div class="live-chat-box">
+          <h3 class="live-chat-title">Live Chat</h3>
+          <div class="live-chat-message">
+            <p class="live-chat-text">Hello! How can I help you today?</p>
           </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <input type="text" class="live-chat-input" placeholder="Type your message...">
+          <button class="live-chat-send">Send</button>
+        </div>
+      </div>
+      <div class="faq">
+        <h3 class="faq-title">Frequently Asked Questions</h3>
+        <div class="faq-question">
+          <p class="faq-text">What is your return policy?</p>
+          <p class="faq-answer">We offer a 30-day money-back guarantee.</p>
+        </div>
+        <div class="faq-question">
+          <p class="faq-text">How do I track my order?</p>
+          <p class="faq-answer">You can track your order using the tracking link sent to your email after purchase.</p>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-secondary">Subscribe</button>
+        </form>
+      </div>
+      <div class="feedback">
+        <h3 class="feedback-title">We Value Your Feedback</h3>
+        <form id="feedback-form">
+          <textarea id="feedback-message" name="feedback-message" placeholder="Your feedback..." required></textarea>
+          <button type="submit" class="btn btn-secondary">Submit Feedback</button>
         </form>
       </div>
     </div>

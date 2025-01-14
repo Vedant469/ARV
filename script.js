@@ -25,3 +25,21 @@ contactForm.addEventListener('submit', (e) => {
   // Reset the form
   contactForm.reset();
 });
+// Live Chat Functionality
+
+document.querySelector('.live-chat-button').addEventListener('click', function() {
+  const chatBox = document.querySelector('.live-chat-box');
+  chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+});
+
+document.querySelector('.live-chat-send').addEventListener('click', function() {
+  const input = document.querySelector('.live-chat-input');
+  const message = input.value;
+  if (message) {
+    const chatMessage = document.createElement('div');
+    chatMessage.classList.add('live-chat-message');
+    chatMessage.innerHTML = `<p class="live-chat-text">${message}</p>`;
+    document.querySelector('.live-chat-box').appendChild(chatMessage);
+    input.value = '';
+  }
+});

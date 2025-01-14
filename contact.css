@@ -51,76 +51,153 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
   input, textarea {
     width: 100%;
     padding: 10px;
-    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
   }
   
   input:focus, textarea:focus {
-    border: 1px solid #33CC33;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-color: #33CC33;
+    outline: none;
   }
   
-  button[type="submit"] {
+  .btn {
     background-color: #33CC33;
-    color: #fff;
-    padding: 12px 24px;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #28a745;
+  }
+  
+  .social-media-links {
+    margin-top: 20px;
+  }
+  
+  .social-media-link {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .testimonials {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .testimonial-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #33CC33;
+  }
+  
+  .testimonial {
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .live-chat {
+    margin-top: 30px;
+  }
+  
+  .live-chat-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .live-chat-box {
+    display: none; /* Initially hidden */
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .live-chat-title {
     font-size: 18px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
-  button[type="submit"]:hover {
-    background-color: #2ecc71;
-    transform: scale(1.05);
+  .live-chat-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  /* Responsive Design */
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .title {
-      font-size: 22px;
-    }
-  
-    .description {
-      font-size: 16 px;
-    }
-  
-    input, textarea {
-      font-size: 16px;
-    }
-  
-    button[type="submit"] {
-      font-size: 16px;
-    }
+  .live-chat-send {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
-  /* Animations */
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .live-chat-send:hover {
+    background-color: #28a745;
   }
   
-  .contact-box {
-    animation: fadeIn 1s ease-in-out;
+  .faq {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .faq-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #33CC33;
+  }
+  
+  .faq-question {
+    margin-bottom: 15px;
+  }
+  
+  .newsletter {
+    margin-top: 30px;
+  }
+  
+  .newsletter-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #33CC33;
+  }
+  
+  .feedback {
+    margin-top: 30px;
+  }
+  
+  .feedback-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #33CC33;
   }
