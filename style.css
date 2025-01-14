@@ -31,6 +31,12 @@ body {
     margin-right: 15px;
 }
 
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar-links ul {
     list-style: none;
     display: flex;
@@ -44,7 +50,7 @@ body {
 }
 
 .navbar-links ul li:last-child {
-    border-radius: none;
+    border-right: none;
 }
 
 .navbar-links ul li a {
@@ -74,26 +80,17 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-links {
-        display: none; /* Hidden by default */
+        display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: #ffffff; /* Changed to white */
-        position: fixed;
-        top: 60px; /* Adjust based on navbar height */
+        background-color: #ffffff;
+        position: relative;
+        top: 0;
         left: 0;
-        height: calc(100vh - 60px); /* Full height minus navbar height */
+        height: auto;
         justify-content: flex-start;
         align-items: center;
         padding-top: 20px;
-        transition: transform 0.3s ease-in-out; /* Smooth slide animation */
-        transform: translateX(-100%); /* Start off-screen */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added box shadow */
-    }
-
-    .navbar-links.active {
-        display: flex; /* Show when active class is added */
-        transform: translateX(0); /* Slide into view */
-        animation: slideIn 0.5s; /* Added animation */
     }
 
     .navbar-links ul {
@@ -104,23 +101,19 @@ body {
 
     .navbar-links ul li {
         padding: 15px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Changed to darker gray */
-        width: 100%; /* Ensure the line spans the full width */
-        text-align: center; /* Center the text */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
     }
 
     .navbar-links ul li:last-child {
-        border-bottom: none; /* Remove the line after the last button */
-    }
-
-    .toggle-button {
-        display: flex; /* Ensure toggle button is visible */
+        border-bottom: none;
     }
 }
 
 /* Toggle Button Styles */
 .toggle-button {
-    display: none; /* Hidden by default on larger screens */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -148,10 +141,10 @@ body {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-
 .toggle-button.active .bar:nth-child(2) {
-    opacity: 0; /* Hide the middle bar */
+    opacity: 0;
 }
+
 .toggle-button.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
