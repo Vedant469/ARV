@@ -1,4 +1,4 @@
-/* Existing CSS (keep this as is) */
+/* Global Styles */
 
 * {
     margin: 0;
@@ -18,9 +18,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     position: relative;
     z-index: 10;
+    height: 40px;
 }
 
 .brand-title {
@@ -31,55 +32,43 @@ body {
     margin-right: 15px;
 }
 
-.navbar-links {
-    display: none;
-}
-
-.navbar-links ul {
+.desktop-links ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
     padding: 0;
+    margin: 0;
 }
 
-.navbar-links ul li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
+.desktop-links ul li {
+    padding: 15px;
+    border: none;
+    width: auto;
     text-align: center;
+    border-right: 1px solid #ffffff;
 }
 
-.navbar-links ul li:last-child {
-    border-bottom: none;
+.desktop-links ul li:last-child {
+    border-right: none;
 }
 
-.navbar-links ul li a {
+.desktop-links ul li a {
     color: #333333;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 12px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;   
 }
 
-.navbar-links ul li a:hover {
-    background-color: #00ff00;
-    transform: translate(2px);
+.desktop-links ul li a:hover {
+    background-color: #33CC33;
+    color: #ffffff;
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
-
-.navbar-links ul li a:active {
-    transform: translateY(4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.navbar-links ul li a:hover {
-    color: #000000; /* black */
-}
-
 .toggle-button {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -102,33 +91,46 @@ body {
     vertical-align: middle;
 }
 
-/* Transform hamburger into cross */
-.toggle-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.toggle-button.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.toggle-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Animation for sliding in */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
 /* Mobile Styles */
+
 @media (max-width: 768px) {
-    .navbar-links {
+    .desktop-links {
+        display: none;
+    }
+
+    .toggle-button {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .toggle-button.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .toggle-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-button.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-links {
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #ffffff;
@@ -137,42 +139,31 @@ body {
         left: 0;
         height: calc(100vh - 60px);
         justify-content: flex-start;
- align-items: center;
+        align-items: center;
         padding-top: 20px;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
     }
 
-    .navbar-links.active {
+    .mobile-links .active {
+        display: flex;
         transform: translateX(0);
     }
 
-    .navbar-links ul {
+    .mobile-links ul {
         flex-direction: column;
         width: 100%;
         padding: 0;
     }
 
-    .navbar-links ul li {
+    .mobile-links ul li {
         padding: 15px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
         text-align: center;
     }
 
-    .navbar-links ul li:last-child {
+    .mobile-links ul li:last-child {
         border-bottom: none;
     }
-}
-/* Transform hamburger into cross */
-.toggle-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.toggle-button.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.toggle-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
