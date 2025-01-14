@@ -1,40 +1,126 @@
-.contact-info {
-    padding: 50px 20px;
-    background-color: #f7f7f7;
-    text-align: center;
-}
+/* Contact Us Page CSS Code */
 
-.contact-form {
-    width: 50%;
-    margin: 0 auto;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
+    text-align: center;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form label {
-    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-box {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
-}
-
-.contact-form input, .contact-form textarea {
+    color: #33CC33;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input, textarea {
     width: 100%;
     padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin-bottom: 20px;
-    border: 1px solid #cccccc;
-}
-
-.contact-form button[type="submit"] {
-    background-color: #4CAF50;
-    color: #ffffff;
-    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input:focus, textarea:focus {
+    border: 1px solid #33CC33;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  button[type="submit"] {
+    background-color: #33CC33;
+    color: #fff;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-    background-color: #3e8e41;
-}
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .description {
+      font-size: 16 px;
+    }
+  
+    input, textarea {
+      font-size: 16px;
+    }
+  
+    button[type="submit"] {
+      font-size: 16px;
+    }
+  }
+  
+  /* Animations */
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .contact-box {
+    animation: fadeIn 1s ease-in-out;
+  }
