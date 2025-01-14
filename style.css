@@ -32,25 +32,26 @@ body {
 }
 
 .navbar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
 }
 
 .navbar-links ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
 }
 
 .navbar-links ul li {
-    position: relative;
-    padding: 0 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
 }
 
 .navbar-links ul li:last-child {
-    border-right: none;
+    border-bottom: none;
 }
 
 .navbar-links ul li a {
@@ -77,43 +78,8 @@ body {
     color: #000000; /* black */
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: #ffffff;
-        position: relative;
-        top: 0;
-        left: 0;
-        height: auto;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 20px;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .navbar-links ul li {
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-links ul li:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Toggle Button Styles */
 .toggle-button {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -157,4 +123,56 @@ body {
     to {
         transform: translateX(0);
     }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        height: calc(100vh - 60px);
+        justify-content: flex-start;
+ align-items: center;
+        padding-top: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-links.active {
+        transform: translateX(0);
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links ul li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links ul li:last-child {
+        border-bottom: none;
+    }
+}
+/* Transform hamburger into cross */
+.toggle-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }

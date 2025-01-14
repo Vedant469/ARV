@@ -1,5 +1,5 @@
-const toggleButton = document.querySelector('.toggle-button');
-const navbarLinks = document.querySelector('.navbar-links');
+const toggleButton = document.getElementById('toggle-button');
+const navbarLinks = document.getElementById('navbar-links');
 
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active');
@@ -41,3 +41,4 @@ document.querySelector('.live-chat-send').addEventListener('click', function() {
     input.value = '';
   }
 });
+
