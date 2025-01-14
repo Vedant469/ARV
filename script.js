@@ -1,11 +1,9 @@
-const toggleButton = document.getElementById('toggle-button');
-const navbarLinks = document.getElementById('navbar-links');
+const toggleButton = document.querySelector('.toggle-button');
+const navbarLinks = document.querySelector('.navbar-links');
 
 toggleButton.addEventListener('click', () => {
-     // Toggle the menu
-     navbarLinks.classList.toggle('active');
-   // Toggle the cross icon
-   toggleButton.classList.toggle('active');
+    navbarLinks.classList.toggle('active');
+    toggleButton.classList.toggle('active');
 });
 // Contact Us Page JavaScript Code
 
