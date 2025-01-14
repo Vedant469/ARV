@@ -76,7 +76,7 @@ body {
         display: none; /* Hidden by default */
         flex-direction: column;
         width: 100%;
-        background-color: rgba(51, 51, 51, 0.9);
+        background-color: white;
         position: fixed;
         top: 60px; /* Adjust based on navbar height */
         left: 0;
@@ -91,7 +91,8 @@ body {
 
     .navbar-links.active {
         display: flex; /* Show when active class is added */
-        transform: translateX(0); /* Slide into view */
+        transform: translateX(0);
+        animation: slideIn 0.5s; /* Slide into view */
     }
 
     .navbar-links ul {
