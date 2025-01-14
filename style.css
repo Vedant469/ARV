@@ -128,7 +128,6 @@ body {
     .toggle-button.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-
     .mobile-links {
         display: none;
         flex-direction: column;
@@ -144,8 +143,8 @@ body {
         transform: translateX(-100%);
         transition: transform 0.3s ease;
     }
-
-    .mobile-links .active {
+    
+    .mobile-links.active {
         display: flex;
         transform: translateX(0);
     }
