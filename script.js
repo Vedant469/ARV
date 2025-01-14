@@ -1,11 +1,10 @@
 const toggleButton = document.getElementById('toggle-button');
-const navbarLinks = document.getElementById('navbar-links');
+const mobileLinks = document.getElementById('navbar-links');
 
 toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
+    mobileLinks.classList.toggle('active');
     toggleButton.classList.toggle('active');
 });
-// Contact Us Page JavaScript Code
 
 // Get the contact form
 const contactForm = document.getElementById('contact-form');
