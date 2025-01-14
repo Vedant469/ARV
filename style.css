@@ -44,7 +44,7 @@ body {
 }
 
 .navbar-links ul li:last-child {
-    border-right: none; /* Changed to none */
+    border-radius: none;
 }
 
 .navbar-links ul li a {
@@ -148,10 +148,10 @@ body {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
+
 .toggle-button.active .bar:nth-child(2) {
     opacity: 0; /* Hide the middle bar */
 }
-
 .toggle-button.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
