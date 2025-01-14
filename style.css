@@ -1,4 +1,5 @@
 /* Existing CSS (keep this as is) */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@ body {
 }
 
 .navbar {
-    background-color:#33CC33 ;
+    background-color: #33CC33;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +44,9 @@ body {
 }
 
 .navbar-links ul li:last-child {
-    border-radius: none;
+    border-right: none; /* Changed to none */
 }
+
 .navbar-links ul li a {
     color: #333333;
     text-decoration: none;
@@ -58,11 +60,10 @@ body {
     transform: translate(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    
 }
 
 .navbar-links ul li a:active {
-    transform:  translateY(4px);
+    transform: translateY(4px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -76,7 +77,7 @@ body {
         display: none; /* Hidden by default */
         flex-direction: column;
         width: 100%;
-        background-color: white;
+        background-color: #ffffff; /* Changed to white */
         position: fixed;
         top: 60px; /* Adjust based on navbar height */
         left: 0;
@@ -86,13 +87,13 @@ body {
         padding-top: 20px;
         transition: transform 0.3s ease-in-out; /* Smooth slide animation */
         transform: translateX(-100%); /* Start off-screen */
-        backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added box shadow */
     }
 
     .navbar-links.active {
         display: flex; /* Show when active class is added */
-        transform: translateX(0);
-        animation: slideIn 0.5s; /* Slide into view */
+        transform: translateX(0); /* Slide into view */
+        animation: slideIn 0.5s; /* Added animation */
     }
 
     .navbar-links ul {
@@ -103,7 +104,7 @@ body {
 
     .navbar-links ul li {
         padding: 15px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a line after each button */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Changed to darker gray */
         width: 100%; /* Ensure the line spans the full width */
         text-align: center; /* Center the text */
     }
@@ -111,6 +112,7 @@ body {
     .navbar-links ul li:last-child {
         border-bottom: none; /* Remove the line after the last button */
     }
+
     .toggle-button {
         display: flex; /* Ensure toggle button is visible */
     }
@@ -147,19 +149,19 @@ body {
 }
 
 .toggle-button.active .bar:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Hide the middle bar */
 }
 
 .toggle-button.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Show toggle button on mobile */
-@media (max-width: 768px) {
-    .toggle-button {
-        display: flex;
+/* Animation for sliding in */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
     }
-}
-html {
-    scroll-behavior: smooth;
+    to {
+        transform: translateX(0);
+    }
 }
