@@ -21,6 +21,22 @@ body {
     color: white; /* Color of the hamburger icon */
 }
 
+/* Hamburger Icon Bars */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Width of the hamburger icon */
+    height: 30px; /* Height of the hamburger icon */
+}
+
+.bar {
+    height: 3px; /* Height of each bar */
+    width: 100%; /* Full width */
+    background-color: white; /* Color of the bars */
+    transition: all 0.3s ease; /* Animation for the bars */
+}
+
 /* Text Block Styles */
 .text-block {
     max-width: 800px;
@@ -51,7 +67,7 @@ body {
 /* Link Styles */
 .desktop-links {
     flex-grow: 1; /* Allows the links to take up available space */
-    display: flex;
+    display: flex; /* Ensure links are displayed on desktop */
     justify-content: center; /* Centers the links */
 }
 

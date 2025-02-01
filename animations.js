@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleMenu() {
     const links = document.querySelector('.desktop-links');
     links.classList.toggle('active');
+
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.toggle('active');
+
+    if (hamburger.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Change to cross icon
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Change back to hamburger icon
+    }
 }
