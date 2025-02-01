@@ -13,6 +13,14 @@ body {
     justify-content: space-between; /* Aligns logo to the left and nav items to the center */
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 24px; /* Size of the hamburger icon */
+    color: white; /* Color of the hamburger icon */
+}
+
 /* Text Block Styles */
 .text-block {
     max-width: 800px;
@@ -22,27 +30,22 @@ body {
     text-align: center; /* Centered text */
 }
 
-/* Header Styles */
-.text-block h2 {
-    font-size: 4em; /* Increased font size for the header */
-    font-weight: bold; /* Bold text */
-    color: white; /* White text color */
-}
-.text-block {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0; /* Remove padding */
-    background-color: transparent; /* Remove background */
-    color: white; /* White text color */
-    text-align: center; /* Centered text */
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .desktop-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        background-color: #555; /* Background color for the dropdown */
+    }
 
+    .desktop-links.active {
+        display: flex; /* Show links when active */
+    }
 
-/* Header Styles */
-.text-block h2 {
-    font-size: 4em; /* Increased font size for the header */
-    font-weight: bold; /* Bold text */
-    font-family: 'Pacifico', cursive; /* Curvy font */
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
 }
 
 /* Link Styles */

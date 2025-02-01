@@ -5,3 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     animatedText.style.transition = 'opacity 1s ease-in-out';
     animatedText.style.opacity = 1;
 });
+
+// Toggle navigation menu
+function toggleMenu() {
+    const links = document.querySelector('.desktop-links');
+    links.classList.toggle('active');
+}
