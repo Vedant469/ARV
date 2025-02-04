@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.2,
         ease: "power3.out"
     });
+    
     // Toggle Menu for Mobile
-function toggleMenu() {
-    const nav = document.querySelector(".desktop-links");
-    nav.classList.toggle("active");
-}
+    function toggleMenu() {
+        const nav = document.querySelector(".desktop-links");
+        nav.classList.toggle("active");
+    }
 
     // Hover effect for service boxes
     document.querySelectorAll(".service-box").forEach(box => {
