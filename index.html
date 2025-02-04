@@ -3,27 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
-    <title>Profit Plus</title>
+    <title>Profit Plus - Services</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="brand-title">
             <img src="logo.jpg" alt="ARV ALLIANCE" width="30" height="30">
-            PROFIT<span style="font-weight: bold;"> PLUS</span>
+            PROFIT <span style="font-weight: bold;">PLUS</span>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776; <!-- Hamburger icon -->
-        </div>
-        <div class="desktop-links" style="display: none;">
-        <div class="hamburger" onclick="toggleMenu()" class="hamburger-icon">
-
-            &#9776; <!-- Hamburger icon -->
-        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="desktop-links">
-        <ul class="nav-links">
-        <div class="desktop-links active">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -31,19 +23,45 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
     </nav>
-    <div class="text-block">
-        <h1> Welcome To Profit Plus</h1>
-        <p>Your success is our priority. We offer a range of services to help you achieve your goals.</p>
-        <p>Contact us today to learn more about how we can assist you.</p>
-        <p>Stay tuned for updates and new offerings!</p>
-    </div>
-    <script src="animations.js"></script>
+
+    <!-- Service Boxes Section -->
+    <section class="services">
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Market Research">
+            <h3>Market Research & Analysis</h3>
+            <p>We provide data-driven solutions and statistical analysis for decision-making.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/753/753399.png" alt="Digital Marketing">
+            <h3>Digital Engineering Marketing</h3>
+            <p>Combining digital marketing with technical expertise to penetrate the market.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/745/745205.png" alt="Direct Sales">
+            <h3>Direct Marketing & Sales</h3>
+            <p>Helping customers experience what they buy using technology.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Branding">
+            <h3>Branding & Penetration</h3>
+            <p>Creating strong brand recognition and effective market strategies.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888856.png" alt="Growth Hacking">
+            <h3>Growth Hacking</h3>
+            <p>Smart strategies to rapidly scale your business.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920321.png" alt="Business Transformation">
+            <h3>Business Transformation</h3>
+            <p>Innovative changes to boost efficiency and growth.</p>
+        </div>
+    </section>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script defer src="animations.js"></script>
+    </head>
+    
 </body>
 </html>
