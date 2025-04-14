@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-    background-color: #333;
+    background: linear-gradient(to right, #00093c, rgba(57, 255, 20, 0.7));
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
@@ -58,8 +58,8 @@ body {
 }
 
 .service-box {
-    background: #222;
-    color: white;
+    background: white;
+    color: black;
     padding: 20px;
     border-radius: 10px;
     height: auto;
