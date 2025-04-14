@@ -72,3 +72,12 @@
 .contact-container button:hover {
     background-color: #555;
 }
+footer {
+    background-color: #2d3748;
+    color: #f7fafc;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #4a5568;
+    position: fixed;
+}
